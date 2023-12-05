@@ -65,7 +65,7 @@ jobs:
       env:
         IMAGE: ${{ fromJSON(steps.meta.outputs.json).tags[0] }}
       run: |
-        docker run --rm ${{ env.IMAGE }} /app/axon --version
+        docker run --rm ${{ env.IMAGE }} /app/axon-proxy --version
 
     - name: Record image info to the outputs of this job
       id: result
